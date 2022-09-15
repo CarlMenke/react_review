@@ -8,17 +8,9 @@
     "start": "node server.js",
     "dev": "nodemon server.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/CarlMenke/disc-bag-helper-server.git"
-  },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/CarlMenke/disc-bag-helper-server"
-  },
-  "homepage": "https://github.com/CarlMenke/disc-bag-helper-server#readme",
   "dependencies": {
     "bcrypt": "^5.0.1",
     "cors": "^2.8.5",

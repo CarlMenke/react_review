@@ -45,7 +45,6 @@ const createUser = async (req,res) =>{
 }
 
 const getPostByTopic = async (req,res) =>{
-
     try{
         const response = await Post.find({topic_id: req.params.topic_id})
 
