@@ -39,8 +39,35 @@ const createProduct = async (req,res)=>{
     }
 }
 
+const getProductsByBrand = async (req,res)=>{
+    try{
+
+        const brand = await Brand.findOne({title:req.body.brand})
+        const products = await Product.find({brand_id:brand})
+
+        return res.status(200).send({products})
+
+    }catch(error){
+        return res.status(500).send({'error':error.message})
+    }
+}
+
+const getBrands = async (req,res)=>{
+    try{
+        const brands = await Brand.find({})
+
+        return res.status(200).send({brands})
+
+    }catch(error){
+        return res.status(500).send({'error':error.message})
+    }
+}
+
+
 module.exports = {
     createBrand,
     createProduct,
+    getProductsByBrand,
+    getBrands
 
 }
